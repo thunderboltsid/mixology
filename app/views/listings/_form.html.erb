@@ -1,0 +1,45 @@
+<%= form_for(@listing) do |f| %>
+  <% if @listing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
+
+      <ul>
+      <% @listing.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :name %><br>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :category %><br>
+    <%= f.text_field :category, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :description %><br>
+    <%= f.text_area :description, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :liqperc %><br>
+    <%= f.text_field :liqperc, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :liqours %><br>
+    <%= f.text_field :liqours, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :mixers %><br>
+    <%= f.text_field :mixers, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :recipe %><br>
+    <%= f.text_area :recipe, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.submit class: "btn btn-primary" %>
+  </div>
+<% end %>
