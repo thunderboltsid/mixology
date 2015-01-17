@@ -12,4 +12,5 @@ class Listing < ActiveRecord::Base
   validates :name, :description, :liqperc, :recipe, :category, presence: true
   validates :liqperc, numericality: {greater_than: 0}
   validates_attachment_presence :image
+  belongs_to :user
 end
