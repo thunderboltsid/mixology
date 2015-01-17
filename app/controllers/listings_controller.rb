@@ -1,7 +1,12 @@
 class ListingsController < ApplicationController
   before_action :set_listing, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_filter :authenticate_user!, only: [:userlist, :new, :create, :edit, :update, :destroy]
   before_filter :check_user, only: [:edit, :update, :destroy]
+
+
+  def userlist
+    @listings = Listing.where(user: current_user).order('created_at DESC')
+  end
 
   # GET /listings
   # GET /listings.json
