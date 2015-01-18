@@ -13,35 +13,35 @@
     <% end %>
 
     <div class="form-group">
-      <%= f.label :name %><br>
+      <%= f.label :name %><div class="annotate">(What do you call your drink?)</div>
       <%= f.text_field :name, class: "form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :category %><br>
-      <%= f.text_field :category, class: "form-control" %>
+      <%= f.label :category %><div class="annotate">(What category of beverages does it belong to?)</div>
+      <%= f.select :category, options_for_select([["Select an option",""], "Wine and Champagne", "Highball", "Shooter", "Shaken", "Martini", "Cocktail", "Mocktail", "Beer"]), class: "form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :description %><br>
-      <%= f.text_area :description, class: "form-control" %>
+      <%= f.label :description %><div class="annotate">(How would you describe your drink in 10 words?)</div>
+      <%= f.text_field :description, class: "form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :liqperc %><br>
+      <%= f.label 'alcohol Percentage' %><div class="annotate">(What percentage of alcohol does the drink contain?)</div>
       <%= f.text_field :liqperc, class: "form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :liqours %><br>
+      <%= f.label :liqours %><div class="annotate">(Alcoholic drinks required for recipe)</div>
       <%= f.text_field :liqours, class: "form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :mixers %><br>
+      <%= f.label :mixers %><div class="annotate">(Alcoholic drinks required for recipe)</div>
       <%= f.text_field :mixers, class: "form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :recipe %><br>
+      <%= f.label :recipe %><div class="annotate">(The detailed recipe for preparing your beverage)</div>
       <%= f.text_area :recipe, class: "form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :image %><br>
+      <%= f.label :image %><div class="annotate">(How does your drink look like?)</div>
       <%= f.file_field :image, class: "form-control" %>
     </div>
     <div class="form-group">

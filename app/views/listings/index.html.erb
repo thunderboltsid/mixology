@@ -7,8 +7,8 @@
             <%= link_to image_tag(listing.image.url), listing %>
             <div class="caption">
               <h3><%= listing.name %></h3>
-              <p><%= listing.category %> </p>
-              <p><%= listing.description %></p>
+              <p><%= listing.category %>, <%= listing.liqperc %>% Alc. </p>
+              <p><%= listing.description.truncate_words(6) %></p>
               <p><%= "Recipe by #{listing.user.name}" %> </p>
             </div>
           </div>

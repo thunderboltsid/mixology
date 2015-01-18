@@ -19,3 +19,9 @@
 # Ignore application configuration
 /config/application.yml
 /config/secrets.yml
+
+# Ignore system files
+/public/system
+
+# Ignore IDE specific files
+/.idea/*
