@@ -19,10 +19,14 @@
       </ul>
       <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+          <%= form_tag listings_path, :method => :get do %>
+              <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: 'Search' %>
+              <%= submit_tag 'Search', :name => nil, class: 'btn btn-default' %>
+          <% end %>
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
       </form>
+
+
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
             <li class="dropdown">

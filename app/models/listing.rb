@@ -9,8 +9,16 @@ class Listing < ActiveRecord::Base
                       :path => ":style/:id_:filename"
     validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
   end
-  validates :name, :description, :liqperc, :recipe, :category, presence: true
+  validates :name, :description, :liqperc, :recipe, :liqours, :mixers, :category, presence: true
   validates :liqperc, numericality: {greater_than_or_equal_to: 0}
   validates_attachment_presence :image
   belongs_to :user
+
+  searchable do
+    text :name, :description, :recipe, :category, :mixers, :liqours, :liqperc, :more_than
+  end
+
+  def more_than
+    
+  end
 end

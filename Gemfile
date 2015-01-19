@@ -31,6 +31,10 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 
+# Add Sunspot serch
+gem 'sunspot_rails'
+gem 'sunspot_solr'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

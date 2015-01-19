@@ -178,6 +178,7 @@
     <orderEntry type="library" scope="PROVIDED" name="paperclip (v4.2.1, RVM: ruby-2.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="paperclip-dropbox (v1.3.0, RVM: ruby-2.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pg (v0.18.1, RVM: ruby-2.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="pr_geohash (v1.0.0, RVM: ruby-2.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v1.6.0, RVM: ruby-2.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.3, RVM: ruby-2.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails (v4.2.0, RVM: ruby-2.1.2) [gem]" level="application" />
@@ -192,6 +193,7 @@
     <orderEntry type="library" scope="PROVIDED" name="rdoc (v4.2.0, RVM: ruby-2.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ref (v1.0.5, RVM: ruby-2.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="responders (v2.0.2, RVM: ruby-2.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rsolr (v1.0.10, RVM: ruby-2.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass (v3.4.10, RVM: ruby-2.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass-rails (v5.0.1, RVM: ruby-2.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sdoc (v0.4.1, RVM: ruby-2.1.2) [gem]" level="application" />
@@ -200,6 +202,9 @@
     <orderEntry type="library" scope="PROVIDED" name="sprockets (v2.12.3, RVM: ruby-2.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets-rails (v2.2.2, RVM: ruby-2.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sqlite3 (v1.3.10, RVM: ruby-2.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sunspot (v2.1.1, RVM: ruby-2.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sunspot_rails (v2.1.1, RVM: ruby-2.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sunspot_solr (v2.1.1, RVM: ruby-2.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="therubyracer (v0.12.1, RVM: ruby-2.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="thor (v0.19.1, RVM: ruby-2.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="thread_safe (v0.3.4, RVM: ruby-2.1.2) [gem]" level="application" />

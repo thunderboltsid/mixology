@@ -11,7 +11,11 @@ class ListingsController < ApplicationController
   # GET /listings
   # GET /listings.json
   def index
-    @listings = Listing.all
+    @search = Listing.search do
+      fulltext params[:search]
+
+    end
+    @listings = @search.results
   end
 
   # GET /listings/1
