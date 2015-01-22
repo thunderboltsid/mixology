@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
   devise_for :installs
-  resources :listings
+  resources :listings do
+    member do
+      put 'like', to: "listings#upvote"
+      put 'dislike', to: "listings#downvote"
+    end
+  end
 
   get 'pages/about'
   get 'pages/contact'

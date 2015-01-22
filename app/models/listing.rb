@@ -15,10 +15,10 @@ class Listing < ActiveRecord::Base
   belongs_to :user
 
   searchable do
-    text :name, :description, :recipe, :category, :mixers, :liqours, :liqperc, :more_than
+    text :name, :description, :recipe, :category, :mixers, :liqours, :liqperc
   end
-
-  def more_than
-    
+  acts_as_votable
+  def score
+    self.get_upvotes.size - self.get_downvotes.size
   end
 end

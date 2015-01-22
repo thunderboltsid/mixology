@@ -8,6 +8,18 @@ class ListingsController < ApplicationController
     @listings = Listing.where(user: current_user).order('created_at DESC')
   end
 
+  def upvote
+    @listing = Listing.find(params[:id])
+    @listing.upvote_by current_user
+    redirect_to listings_path
+  end
+
+  def downvote
+    @listing = Listing.find(params[:id])
+    @listing.downvote_by current_user
+    redirect_to listings_path
+  end
+
   # GET /listings
   # GET /listings.json
   def index
@@ -90,4 +102,5 @@ class ListingsController < ApplicationController
       redirect_to root_url, alert: "Sorry, This listing belongs to someone else"
     end
   end
+
 end
