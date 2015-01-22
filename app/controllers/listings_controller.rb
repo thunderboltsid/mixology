@@ -9,15 +9,23 @@ class ListingsController < ApplicationController
   end
 
   def upvote
-    @listing = Listing.find(params[:id])
-    @listing.upvote_by current_user
-    redirect_to listings_path
+    if user_signed_in?
+      @listing = Listing.find(params[:id])
+      @listing.upvote_by current_user
+      redirect_to :back
+    else
+      redirect_to new_user_session_path, alert: 'You need to be logged in to upvote. Please login or sign up.'
+    end
   end
 
   def downvote
-    @listing = Listing.find(params[:id])
-    @listing.downvote_by current_user
-    redirect_to listings_path
+    if user_signed_in?
+      @listing = Listing.find(params[:id])
+      @listing.downvote_by current_user
+      redirect_to :back
+    else
+      redirect_to new_user_session_path, alert: 'You need to be logged in to downvote. Please login or sign up.'
+    end
   end
 
   # GET /listings
@@ -25,7 +33,6 @@ class ListingsController < ApplicationController
   def index
     @search = Listing.search do
       fulltext params[:search]
-
     end
     @listings = @search.results
   end

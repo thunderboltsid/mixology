@@ -10,7 +10,7 @@
               <p><%= listing.category %>, <%= listing.liqperc %>% Alc. </p>
               <p><%= listing.description.truncate_words(10) %></p>
               <p><%= "Recipe by #{listing.user.name}" %></p>
-              <p><%= link_to "upvote", like_listing_path(listing), method: :put %>&nbsp <%= listing.score %>&nbsp <%= link_to "downvote", dislike_listing_path(listing), method: :put %></p>
+              <p><%= link_to "upvote", like_listing_path(listing), method: :put, class: 'btn btn-primary' %>&nbsp <%= listing.score %>&nbsp <%= link_to "downvote", dislike_listing_path(listing), method: :put, class: 'btn btn-danger' %></p>
             </div>
           </div>
         </div>
